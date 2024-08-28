@@ -1,0 +1,156 @@
+<html>
+<head>
+	<title>Practical-9</title>
+	<script>
+		<!--
+			function reset(){
+				document.getElementById("name").value="";
+				document.getElementById("age").value="";
+				document.getElementById("address").value="";
+				document.getElementById("password").value="";
+				document.getElementById("sex_male").checked="";
+				document.getElementById("sex_female").checked="";
+				document.getElementById("lan_java").checked="";
+				document.getElementById("lan_python").checked="";
+				document.getElementById("lan_net").checked="";
+				document.getElementById("lan_php").checked="";
+				document.getElementById("lan_others").checked="";
+			}
+			function check(){
+				if(document.getElementById("name").value==""){
+					alert("Please Enter Your Name");
+				}
+				if(document.getElementById("age").value==""){
+					alert("Please Enter Your Age");
+				}
+				if(document.getElementById("address").value==""){
+					alert("Please Enter Your Address");
+				}
+				if(document.getElementById("password").value==""){
+					alert("Please Enter Your Password");
+				}
+				if(document.getElementById("sex_male").checked ==false &&
+					document.getElementById("sex_female").checked ==false){
+					alert("Please Select Gender");
+				}
+				if(document.getElementById("lan_java").checked==false &&
+				document.getElementById("lan_python").checked==false &&
+				document.getElementById("lan_net").checked==false &&
+				document.getElementById("lan_php").checked==false &&
+				document.getElementById("lan_others").checked==false){
+					alert("Please Select Language");
+				}
+				if(document.getElementById("name").value!="" && document.getElementById("age").value!="" &&
+					document.getElementById("address").value!="" && 
+					document.getElementById("password").value!="" &&
+					(document.getElementById("sex_male").checked !=false ||
+						document.getElementById("sex_female").checked !=false) &&
+					(document.getElementById("lan_java").checked!=false ||
+						document.getElementById("lan_python").checked!=false ||
+						document.getElementById("lan_net").checked!=false ||
+						document.getElementById("lan_php").checked!=false ||
+						document.getElementById("lan_others").checked!=false)
+					){
+					alert("You can Submit Your Data!");
+				}
+			}
+			function submit(){
+				if(document.getElementById("name").value!="" && document.getElementById("age").value!="" &&
+					document.getElementById("address").value!="" && 
+					document.getElementById("password").value!="" &&
+					(document.getElementById("sex_male").checked !=false ||
+						document.getElementById("sex_female").checked !=false) &&
+					(document.getElementById("lan_java").checked!=false ||
+						document.getElementById("lan_python").checked!=false ||
+						document.getElementById("lan_net").checked!=false ||
+						document.getElementById("lan_php").checked!=false ||
+						document.getElementById("lan_others").checked!=false)
+					){
+						alert("Your data submitted.");
+						reset();
+					}
+					else{
+						check();
+					}
+			}
+		//-->
+	</script>
+	<style>
+		.table{
+			margin-top:50px;
+			background-color:powderblue;
+			font-size:20px;
+			font-family:arial;
+		}
+		.caption{
+			text-decoration:underline;
+			color:mediumseagreen;
+			font-family:sen-serif;
+		}
+		.btn_first{
+			width:90px;
+			cursor:pointer;
+		}
+		.btn_second{
+			width:120px;
+			cursor:pointer;
+		}
+		.imp_text{
+			color:red;
+		}
+	</style>
+<body>
+	<table align=center border=1px cellpadding=4 cellspacing=0 class="table">
+		<caption><h2 class="caption">ENTRY FORM</h2></caption>
+		<tr>
+			<td>Enter Your Name:</td>
+			<td><input type="text" id="name" name="name" placeholder="Enter Name"></td>
+		</tr>
+		<tr>
+			<td>Enter Your Age:</td>
+			<td><input type="text" id="age" name="age" placeholder="Enter Age"></td>
+		</tr>
+		<tr>
+			<td>Enter Your Address:</td>
+			<td><textarea cols="30" id="address" rows="5" name="address"></textarea></td>
+		</tr>
+		<tr>
+			<td>Sex:</td>
+			<td>
+				<input type="radio" id="sex_male" name="gender">Male<br>
+				<input type="radio" id="sex_female" name="gender">Female
+			</td>
+		</tr>
+		<tr>
+			<td>Language:</td>
+			<td>
+				<input id="lan_java" type="Checkbox" value="java">JAVA<br>
+				<input id="lan_python" type="Checkbox" value="python">PYTHON<br>
+				<input id="lan_net" type="Checkbox" value=".net">.NET<br>
+				<input id="lan_php" type="Checkbox" value="php">PHP<br>
+				<input id="lan_others" type="Checkbox" value="others">Others<br>
+			</td>
+		</tr>
+		<tr>
+			<td>Enter Your Password:</td>
+			<td><input type="Password" id="password" name="pass" placeholder="Enter Password"></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<input type="button" class="btn_first" value="Reset" class="btn_first" onclick="reset()">
+				<input type="button" name="btn_check" value="Check" class="btn_first" onclick="check()">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<strong class="imp_text">Before submitting the data's please click the check Button.</strong>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<input type="button" name="btn_submit" value="Submit" class="btn_second" onclick="submit()">
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Practical-15</title>
+    <script type="text/javascript">
+        function Alert() {
+            alert("This is the Example of alert dialog box.");
+        }
+        function Prompt() {
+            var x = prompt("This is the Example of prompt dialog box.\n Enter Your name","Name"); 
+            alert("Hello " + x);
+        }
+        function Confirm() {
+            var x = confirm("This is the Example of confirm dialog box.\nDo you want to continue?");
+            if (x == true) {
+                alert("User Wants to Continue");
+            }
+            else {
+                alert("User don't Want to Continue");
+            }
+        } 
+    </script>
+</head>
+
+<body>
+    <form name="myForm" id="myForm">
+        <p>Click the below Button to see the alert box
+            ..</p><br>
+        <input type="button" value="Alert" onclick="Alert()"><br><br>
+        <p>Click the below Button to see the Prompt dialog
+            box ..</p><br>
+        <input type="button" value="Prompt" onclick="Prompt()"><br><br>
+        <p>Click the below Button to see the confirm
+            dialog box ..</p><br>
+        <input type="button" value="Confirm" onclick="Confirm()"><br><br>
+    </form>
+</body>
+
+</html>
