@@ -1,0 +1,82 @@
+<html>
+<head>
+    <title>Practical-17</title>
+    <script type="text/javascript">
+        function validateForm(){
+            let email=document.getElementById("e-mail").value;
+            let isbnNumber=document.getElementById("isbn_num").value;
+            let Name=document.getElementById("u_name").value;
+            let PanNumber=document.getElementById("pan_num").value;
+            let Dob=document.getElementById("birth_date").value;
+            let Url=document.getElementById("url").value;
+
+            const Email_Pattern=/^[A-Za-z]+@+\istar\.edu\.in$/;
+            const isbnNumber_Pattern=/^\d{4}-\d{4}$/;
+            const Name_Pattern=/^[A-Za-z\s]{1,10}$/;
+            const PanNumber_Pattern=/^[A-Z0-9]{10}$/;
+            const Dob_Pattern=/^(0[1-9]|[12][0-9]|3[01]):(0[1-9]|1[0-2]):\d{2}$/;
+            const Url_Pattern=/^http:\/\/www\..+/;
+            if(Email_Pattern.test(email)!=true){
+                alert("It's domain must be 'istar.edu.in'.");
+            }
+            if(isbnNumber_Pattern.test(isbnNumber)!=true){
+                alert("Enter Valid ISBN Number.");
+            }
+            if(Name_Pattern.test(Name)!=true){
+                alert("Name must contain characters and not more than 10 character!");
+            }
+            if(PanNumber_Pattern.test(PanNumber)!=true){
+                alert("Enter Valid Pan Number.");
+            }
+            if(Dob_Pattern.test(Dob)!=true){
+                alert("Enter valid date in 'dd:mm:yy' format.");
+            }
+            if(Url_Pattern.test(Url)!=true){
+                alert("URl must begin with 'http://www'");
+            }
+            if(Email_Pattern.test(email)==true && 
+                isbnNumber_Pattern.test(isbnNumber)==true &&
+                Name_Pattern.test(Name)==true &&
+                PanNumber_Pattern.test(PanNumber)==true &&
+                Dob_Pattern.test(Dob)==true &&
+                Url_Pattern.test(Url)==true){
+                    alert("Data Successfully Submitted.");
+                }
+        }
+    </script>
+</head>
+<body>
+    <form action="Practical-17.html" method="post" onsubmit="validateForm()">
+    <table style="background-color: #ed8cf2; width:315px; padding: 5px;" border="2.5" cellspacing="3" cellpadding="4" align="center">
+        <caption><h1><u>Form Validation</u></h1></caption>
+        <tr>
+            <td>E-mail Id : </td>
+            <td align="center"><input type="text" name="e-mail" id="e-mail" placeholder="for ex. student@istar.edu.in"></td>
+        </tr>
+        <tr>
+            <td>ISBN Number : </td>
+            <td align="center"><input type="text" name="isbn_num" id="isbn_num" placeholder="for ex. 1124-4563"></td>
+        </tr>
+        <tr>
+            <td>Name : </td>
+            <td align="center"><input type="text" name="u_name" id="u_name" placeholder="for ex. Student_Name"></td>
+        </tr>
+        <tr>
+            <td>PAN Number : </td>
+            <td align="center"><input type="text" name="pan_num" id="pan_num" placeholder="for ex. AA23ER89N0"></td>
+        </tr>
+        <tr>
+            <td>DOB : </td>
+            <td align="center"><input type="text" name="birth_date" id="birth_date" placeholder="dd:mm:yy Format"></td>
+        </tr>
+        <tr>
+            <td>URL : </td>
+            <td align="center"><input type="text" name="url" id="url" placeholder="for ex. http://www.google.com"></td>
+        </tr>
+        <tr align="center">
+            <td colspan="2"><input type="submit" name="submit" value="Submit"  style="cursor: pointer;"></td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

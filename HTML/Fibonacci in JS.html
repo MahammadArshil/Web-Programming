@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Practical-13</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var x=parseInt(prompt("Enter Number","Number only"));
+		var a=0;
+		var b=1;
+		document.write("Fibonacci series: ");
+		for(i=0;i<x;i++){
+			document.write(a+" ");
+			var next_num=a+b;
+			a=b;
+			b=next_num;
+		}
+	</script>
+</body>
+</html>

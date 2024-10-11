@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Practical-12</title>
+	<script type="text/javascript">
+		function background(color){
+			document.getElementById("text_1").style.color=color;
+		}
+		function background_body(img){
+			document.body.style.backgroundImage="url('"+img+"')";
+		}
+</script>
+	<style>
+		.first_div{
+			border:2px solid black;
+			padding:20px;
+		}
+		.second_div{
+			border:2px solid black;
+			padding:10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="first_div">
+		<img src="MA.png" alt="logo" height="200px" width="210px" id="img_first" onclick="background_body('MA.png')">
+		<img src="MA-logo.png" alt="logo" height="200px" width="210px" id="img_first" onclick="background_body('MA-logo.png')">
+		<img src="logo-png.png" alt="logo" height="200px" width="210px" id="img_first" onclick="background_body('logo-png.png')">
+	</div>
+	<br></br>
+	<div class="second_div">
+		<table border=2 cellpadding=2 cellspacing=2>
+			<tr>
+				<td style="background-color:#ff0000;width:100px;height:40px" id="cell_red" onmouseover="background(this.style.backgroundColor)" onmouseout="background('#000')"></td>
+				<td style="background-color:#000fff;width:100px;height:40px" id="cell_blue" onmouseover="background(this.style.backgroundColor)" onmouseout="background('#000')"></td>
+				<td style="background-color:#09a604;width:100px;height:40px" id="cell_green" onmouseover="background(this.style.backgroundColor)" onmouseout="background('#000')"></td>
+			</tr>
+		</table>
+		<br>
+		<input type="text" id="text_1" name="text_1" value="Text Color is Chanaged">
+	</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>Practical-14</title>
+	<script type="text/javascript">
+		var x=parseInt(prompt("Enter Number for Factorial","Number only"));
+		function factorial(n){
+			if(n==1 || n==0){
+				return("1");
+			}
+			else{
+				return(n*(factorial(n-1)));
+			}
+		}
+		document.write("Factorial of "+x+" is:"+factorial(x));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

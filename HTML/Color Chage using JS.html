@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Practical-11</title>
+	<script type="text/javascript">
+		function redColor(){
+			document.body.style.backgroundColor = "red";
+		}
+		function yellowColor(){
+			document.body.style.backgroundColor = "yellow";
+		}
+	</script>
+	<style>
+		.btn-red{
+			cursor: pointer;
+			height: 50px;
+			width: 150px;
+			font-size: 20px;
+			color: red;
+			background-color: bisque;
+		}
+		.btn-yellow{
+			cursor: pointer;
+			height: 50px;
+			width: 150px;
+			font-size: 20px;
+			color: yellow;
+			background-color: rgb(187, 103, 0);
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="RED" onclick="redColor()" class="btn-red">
+	<br><br>
+	<input type="button" value="YELLOW" onclick="yellowColor()" class="btn-yellow">
+</body>
+</html>

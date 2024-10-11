@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>Pr-40</title>
+    <style>
+        .tab_1{
+            font-family: Cambria;
+            font-size: 30px;
+            border: 2px solid #000;
+            padding: 10px;
+            border-radius: 20px;
+            background-color: aqua;
+            color: rgb(255, 0, 0);
+        }
+        .tab_1 input{
+            font-size: 19px;
+            color: black;
+            padding: 1px;
+        }
+        .btn{
+            cursor: pointer;
+            background-color: rgb(255, 153, 0);
+            border-radius: 20px;
+            text-align: center;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form action="Practical-40.php" method="post">
+        <table class="tab_1">
+            <caption style="color:rgb(21, 0, 255);">Enter Your Details</caption>
+            <tr>
+                <td>Enter First Name:</td>
+                <td><input type="text" name="fname" required></td>
+            </tr>
+            <tr>
+                <td>Enter Last Name:</td>
+                <td><input type="text" name="lname" required></td>
+            </tr>
+            <tr>
+                <td>Enter Your Age:</td>
+                <td><input type="number" name="age" required></td>
+            </tr>
+            <tr>
+                <td>Enter Course Name:</td>
+                <td><input type="text" name="cname" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" name="submit" value="Submit" class="btn">
+                    <input type="submit" name="search" value="Search" class="btn">
+                    <input type="submit" name="update" value="Update" class="btn">
+                    <input type="submit" name="delete" value="Delete" class="btn">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

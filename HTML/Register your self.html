@@ -1,0 +1,220 @@
+<html>
+<head>
+	<title>Practical-10</title>
+	<style>
+		.table{
+			background-color:#C0C0C0;
+			margin-top:50px;
+			font-size:15px;
+			font-family:arial;
+			border:3px solid black;
+		}
+		.table-2{
+			border:1.5px solid black;
+		}
+		.btn_first{
+			width:90px;
+			background-color:green;
+			font-style:bold;
+			font-size:15px;
+			cursor: pointer;
+		}
+		.imp_text{
+			color:red;
+		}
+		.image_college{
+			width:835px;
+			height:100px;
+		}
+	</style>
+	<script>
+		<!--
+			function check(){
+				if(document.getElementById("fname").value==""){
+					alert("Please Enter First Name.");
+				}
+				if(document.getElementById("lname").value==""){
+					alert("Please Enter Last Name.");
+				}
+				if(document.getElementById("birthdate").value==""){
+					alert("Please Enter Your Birthdate.");
+				}
+				if(document.getElementById("address").value==""){
+					alert("Please Enter Your Address.");
+				}
+				if(document.getElementById("city").value=="#"){
+					alert("Please Select Valid City Name");
+				}
+				if(document.getElementById("state").value=="#"){
+					alert("Please Select Valid State Name");
+				}
+				if(document.getElementById("sex_male").checked==false && 
+					document.getElementById("sex_female").checked==false){
+					alert("Please Select Gender.");
+				}
+				if(document.getElementById("hob_sing").checked==false &&
+				document.getElementById("hob_play").checked==false &&
+				document.getElementById("hob_dance").checked==false &&
+				document.getElementById("hob_oth").checked==false){
+					alert("Select Atleast One Hobbies.");
+				}
+				if(document.getElementById("class_x_board").value=="" ||
+				document.getElementById("class_x_percentage").value=="" ||
+				document.getElementById("class_x_year").value==""){
+					alert("Please Enter All the details for Class X.");
+				}
+				if(document.getElementById("class_xii_board").value=="" ||
+				document.getElementById("class_xii_percentage").value=="" ||
+				document.getElementById("class_xii_year").value==""){
+					alert("Please Enter All the details for Class XII.");
+				}
+				if(document.getElementById("graduation_board").value=="" ||
+				document.getElementById("graduation_percentage").value=="" ||
+				document.getElementById("graduation_year").value==""){
+					alert("Please Enter All the details for Graduation.");
+				}
+				if(document.getElementById("fname").value!="" && 
+					document.getElementById("lname").value!="" &&
+					document.getElementById("birthdate").value!="" &&
+					document.getElementById("address").value!="" &&
+					document.getElementById("city").value!="#" &&
+					document.getElementById("state").value!="#" &&
+					(document.getElementById("sex_male").checked!=false ||
+						document.getElementById("sex_female").checked!=false) &&
+					(document.getElementById("hob_sing").checked!=false ||
+						document.getElementById("hob_play").checked!=false ||
+						document.getElementById("hob_dance").checked!=false ||
+						document.getElementById("hob_oth").checked!=false) &&
+					(document.getElementById("class_x_board").value!="" ||
+						document.getElementById("class_x_percentage").value!="" ||
+						document.getElementById("class_x_year").value!="") &&
+					(document.getElementById("class_xii_board").value!="" ||
+						document.getElementById("class_xii_percentage").value!="" ||
+						document.getElementById("class_xii_year").value!="")&&
+					(document.getElementById("graduation_board").value!="" ||
+						document.getElementById("graduation_percentage").value!="" ||
+						document.getElementById("graduation_year").value!="")
+					){
+						alert("You're data has been Submitted.");
+					}
+				
+			}
+		//-->
+	</script>
+</head>
+<body>
+	<form name="myForm" id="myForm" onsubmit="check()">
+	<table align=center class="table" cellspacing=2 cellpadding=2 border=2>
+		<tr>
+			<td colspan=2><img class="image_college" src="Images/College.png"alt="College"></td>
+		</tr>
+		<tr align=center>
+			<td colspan=2><b>M.SC.(INFORMATION TECHNOLOGY)</b></td>
+		</tr>
+		<tr align="center">
+			<td colspan=2><b>STUDENT REGISTRATION FORM(ACADEMIC YEAR 2024-2025)</b></td>
+		</tr>
+		<tr>
+			<td Class="imp_text">FIRST NAME:</td>
+			<td><input type="text" name="fname" id="fname"></td>
+		</tr>
+		<tr>
+			<td Class="imp_text">LAST NAME:</td>
+			<td><input type="text" name="lname" id="lname"></td>
+		</tr>
+		<tr>
+			<td Class="imp_text">BIRTH DATE</td>
+			<td><input type="text" name="birthdate" id="birthdate"></td>
+		</tr>
+		<tr>
+			<td Class="imp_text">ADDRESS:</td>
+			<td><textarea cols="30" rows="5" name="address" id="address"></textarea></td>
+		</tr>
+		<tr>
+			<td Class="imp_text">CITY:</td>
+			<td>
+				<select name="city" id="city">
+					<option value="#" id="city_null">Choose City</option>
+					<option value="1" id="city_nadiad">NADIAD</option>
+					<option value="2" id="city_anand">ANAND</option>
+					<option value="3" id="city_vvn">VVN</option>
+					<option value="4" id="city_vadodara">VADODARA</option>
+					<option value="5" id="city_ahmedabad">AHMEDABAD</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td Class="imp_text">STATE:</td>
+			<td>
+				<select name="state" id="state">
+					<option value="#" id="state_null">Choose State</option>
+					<option value="1" id="state_gujrat">GUJRAT</option>
+					<option value="2" id="state_rajastan">RAJASTHAN</option>
+					<option value="3" id="state_maharastra">MAHARASTRA</option>
+					<option value="4" id="state_punjab">PUNJAB</option>
+					<option value="5" id="state_delhi">DELHI</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td Class="imp_text">GENDER:</td>
+			<td>
+				<input type="radio" name="gender" id="sex_male">Male<br>
+				<input type="radio" name="gender" id="sex_female">Female
+			</td>
+		</tr>
+		<tr>
+			<td Class="imp_text">HOBBIES:</td>
+			<td>
+				<input type="Checkbox" value="singing" id="hob_sing">Singing
+				<input type="Checkbox" value="playing" id="hob_play">Playing
+				<input type="Checkbox" value="dancing" id="hob_dance">Dancing
+				<input type="Checkbox" value="others" id="hob_oth">Others
+				<input type="text" name="other_hobbies" id="oth_hob">
+			</td>
+		</tr>
+		<tr>
+			<td Class="imp_text">QUALIFICATION:</td>
+			<td>
+				<table class="table-2" border=2 cellpadding=2 cellspacing=2>
+					<tr align=center  Class="imp_text">
+						<td>SR.NO</td>
+						<td>EXAMINATION</td>
+						<td>BOARD</td>
+						<td>PERCENTAGE</td>
+						<td>YEAR OF PASSING</td>
+					</tr>
+					<tr align=center>
+						<td Class="imp_text">1.</td>
+						<td Class="imp_text">Class X</td>
+						<td><input type="text" name="class_x_board" id="class_x_board"></td>
+						<td><input type="text" name="class_x_percentage" id="class_x_percentage"></td>
+						<td><input type="text" name="class_x_year" id="class_x_year"></td>
+					</tr>
+					<tr align=center>
+						<td Class="imp_text">2.</td>
+						<td Class="imp_text">Class XII</td>
+						<td><input type="text" name="class_xii_board" id="class_xii_board"></td>
+						<td><input type="text" name="class_xii_percentage" id="class_xii_percentage"></td>
+						<td><input type="text" name="class_xii_year" id="class_xii_year"></td>
+					</tr>
+					<tr align=center>
+						<td Class="imp_text">3.</td>
+						<td Class="imp_text">Graduation</td>
+						<td><input type="text" name="graduation_board" id="graduation_board"></td>
+						<td><input type="text" name="graduation_percentage" id="graduation_percentage"></td>
+						<td><input type="text" name="graduation_year" id="graduation_year"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<input type="submit" name="btn_submit" value="Submit" class="btn_first">
+				<input type="reset" name="btn_reset" value="Reset" class="btn_first">
+			</td>
+		</tr>
+	</table>
+<form>
+</body>
+</html>
